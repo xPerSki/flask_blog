@@ -22,14 +22,13 @@
                     <!-- Post preview-->
                     {% for i in range(nof_blogs) %}
                         <div class="post-preview">
-                            <a href="#">
+                            <a href="{{ url_for('post', id=i) }}">
                                 <h2 class="post-title">{{ blog_data[i]['title'] }}</h2>
                                 <h3 class="post-subtitle">{{ blog_data[i]['subtitle'] }}</h3>
                             </a>
                             <p class="post-meta">
                                 Posted by
-                                <a href="#!">Start Bootstrap</a>
-                                on September 24, 2023
+                                <a href="#!">Admin</a>
                             </p>
                         </div>
                         <!-- Divider-->
