@@ -22,9 +22,9 @@ def about():
 @app.route('/contact', methods=["POST", "GET"])
 def contact():
     if request.method == "GET":
-        return render_template("contact.html")
+        return render_template("contact.html", h1="Contact Me")
     elif request.method == "POST":
-        return f"<h1>Successfully sent your message</h1>"
+        return render_template("contact.html", h1="Message sent successfully")
 
 
 @app.route('/post<int:id>')
